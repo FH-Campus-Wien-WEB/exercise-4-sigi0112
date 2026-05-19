@@ -79,6 +79,147 @@
       "Poster": "https://m.media-amazon.com/images/M/MV5BY2RiOTM0ZDgtNDRlMi00MDMzLWI1NDYtY2NjZDM4YTkwNWVlXkEyXkFqcGc@._V1_SX300.jpg",
       "Metascore": 67,
       "imdbRating": 6.9
+    },
+    "tt16428256": {
+      "imdbID": "tt16428256",
+      "Title": "Suzume",
+      "Released": "14 Apr 2023",
+      "Runtime": 122,
+      "Genres": [
+        "Animation",
+        "Adventure",
+        "Drama"
+      ],
+      "Directors": [
+        "Makoto Shinkai"
+      ],
+      "Writers": [
+        "Makoto Shinkai"
+      ],
+      "Actors": [],
+      "Plot": "A modern action adventure road story where a 17-year-old girl named Suzume helps a mysterious young man close doors from the other side that are releasing disasters all over in Japan.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BODhkNDhmNzktODFmMC00NDZiLWEzN2UtY2YwYzgzYTVlMWZmXkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": 77,
+      "imdbRating": 7.6
+    },
+    "tt2293640": {
+      "imdbID": "tt2293640",
+      "Title": "Minions",
+      "Released": "",
+      "Runtime": 91,
+      "Plot": "Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BODI4NzMyNjE0MF5BMl5BanBnXkFtZTgwMTcwNzI0MzE@._V1_SX300.jpg",
+      "Metascore": 56,
+      "imdbRating": 6.4,
+      "Genres": [
+        "Adventure",
+        "Animation",
+        "Comedy"
+      ],
+      "Directors": [
+        "Kyle Balda",
+        "Pierre Coffin"
+      ],
+      "Writers": [
+        "Brian Lynch"
+      ],
+      "Actors": [
+        ""
+      ]
+    },
+    "tt5311514": {
+      "imdbID": "tt5311514",
+      "Title": "Your Name.",
+      "Released": "07 Apr 2017",
+      "Runtime": 106,
+      "Genres": [
+        "Animation",
+        "Drama",
+        "Fantasy"
+      ],
+      "Directors": [
+        "Makoto Shinkai"
+      ],
+      "Writers": [
+        "Makoto Shinkai"
+      ],
+      "Actors": [],
+      "Plot": "Two teenagers share a profound, magical connection upon discovering they are swapping bodies. Things manage to become even more complicated when the boy and girl decide to meet in person.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": 81,
+      "imdbRating": 8.4
+    },
+    "tt38121182": {
+      "imdbID": "tt38121182",
+      "Title": "Jujutsu Kaisen: Execution",
+      "Released": "05 Dec 2025",
+      "Runtime": 87,
+      "Genres": [
+        "Animation",
+        "Action",
+        "Fantasy"
+      ],
+      "Directors": [],
+      "Writers": [
+        "Gege Akutami",
+        "Hiroshi Seko"
+      ],
+      "Actors": [],
+      "Plot": "A veil abruptly descends over the busy Shibuya area amid the bustling Halloween crowds, trapping countless civilians inside. In the aftermath, ten colonies across Japan are transformed into dens of curses.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BODMxOWIxYzAtNTNiYi00MTk5LWE2MjUtNjM1MTg3YmQ5NTlhXkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": null,
+      "imdbRating": 6.5
+    },
+    "tt9335498": {
+      "imdbID": "tt9335498",
+      "Title": "Demon Slayer: Kimetsu no Yaib",
+      "Released": "",
+      "Runtime": 25,
+      "Plot": "A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": 0,
+      "imdbRating": 8.6,
+      "Genres": [
+        "Action",
+        "Adventure",
+        "Animation"
+      ],
+      "Directors": [
+        ""
+      ],
+      "Writers": [
+        ""
+      ],
+      "Actors": [
+        ""
+      ]
+    },
+    "tt4520988": {
+      "imdbID": "tt4520988",
+      "Title": "Frozen II",
+      "Released": "",
+      "Runtime": 103,
+      "Plot": "Anna, Elsa, Kristoff, Olaf and Sven leave Arendelle to travel to an ancient, autumn-bound forest of an enchanted land. They set out to find the origin of Elsa's powers in order to save their kingdom.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZTE1YjlmZjctNjIwNi00NDQ0LTlmMzgtYWZkY2RkZTMwNTdmXkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": 64,
+      "imdbRating": 6.8,
+      "Genres": [
+        "Adventure",
+        "Animation",
+        "Comedy"
+      ],
+      "Directors": [
+        "Chris Buck",
+        "Jennifer Lee"
+      ],
+      "Writers": [
+        "Jennifer Lee",
+        "Hans Christian Andersen",
+        "Chris Buck"
+      ],
+      "Actors": [
+        ""
+      ]
     }
   },
   "jane": {

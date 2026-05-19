@@ -89,9 +89,20 @@ function addMovie(imdbID) {
       if (response.status === 201) {
         // Task 2.2: Make sure to remove the added movie from the search results to avoid
         // giving the user the option to add it again.
-    
-        loadMovies();
-        updateGenres();
+    const searchItem = document.getElementById(`search-item-${imdbID}`);
+        if (searchItem) {
+          searchItem.remove();
+        }
+        fetch("/session")
+          .then(() => {
+            loadMovies();
+            updateGenres();
+          })
+          .catch(() => {
+            // Falls der Session-Check fehlschlägt, laden wir trotzdem die Filme
+            loadMovies();
+            updateGenres();
+          });
       } else if (response.status === 200) {
         alert(messages.movieAlreadyInCollection);
       } else {
@@ -133,6 +144,31 @@ function searchMovies(query) {
       const resultsDiv = document.getElementById("searchResults");
       resultsDiv.innerHTML = '';
 
+     if (!results || results.length === 0) {
+        new ElementBuilder("p")
+          .text(messages.noResultsFound)
+          .appendTo(resultsDiv);
+        return;
+      }
+
+      // Fall 2: Ergebnisse rendern
+      results.forEach(movie => {
+        // Wir nutzen .with(), da das der "Lehrer-Standard" in deiner builders.js ist!
+        const itemRow = new ElementBuilder("div")
+          .with("id", `search-item-${movie.imdbID}`)
+          .with("style", "display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;");
+
+        // Text-Inhalt (Titel + Jahr)
+        const infoText = new ElementBuilder("span")
+          .text(`${movie.Title} (${movie.Year || 'N/A'})`);
+
+        // "Add"-Button mit der originalen .onclick()-Methode aus der ButtonBuilder-Klasse
+        const addBtn = new ButtonBuilder("Add")
+          .onclick(() => addMovie(movie.imdbID));
+
+        // Alles sauber im Builder-Pattern zusammenbauen
+        itemRow.append(infoText).append(addBtn).appendTo(resultsDiv);
+      });
       // Task 2.2: Render the results returned from the server. Make sure to
       // include an "Add" button for each result that calls `addMovie(imdbID)` when clicked.
       // There is a second part to this task, in `addMovie`
@@ -168,6 +204,17 @@ window.onload = function () {
       // Task 1.2: Render a user greeting to `#userGreeting` 
       // using `firstName`, `lastName`, and the server-provided
       // login timestamp.
+      const loginDate = new Date(currentSession.loginTime);
+    
+  
+    const dateOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedDate = new Intl.DateTimeFormat('de-DE', dateOptions).format(loginDate);
+    
+    
+    const timeOptions = { hour: '2-digit', minute: '2-digit' };
+    const formattedTime = new Intl.DateTimeFormat('de-DE', timeOptions).format(loginDate);
+
+    greetingElement.textContent = `Hi ${currentSession.firstName} ${currentSession.lastName}, du hast dich am ${formattedDate} um ${formattedTime} angemeldet.`;
     } else {
       greetingElement.textContent = messages.loggedOutGreeting;
     }
@@ -212,11 +259,36 @@ window.onload = function () {
     e.preventDefault();
     const formData = new FormData(e.target);
 
+
+   const data = Object.fromEntries(formData.entries());
+
+  fetch("/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(messages.loginFailed);
+    }
+    return response.json();
+  })
+  .then(sessionData => {
+    currentSession = sessionData;
+    document.getElementById('loginDialog').close();
+    updateUI();
+    loadMovies();
+  })
+  .catch(error => {
+    console.error('Login failed:', error);
+    alert(messages.loginFailed);
+  });
+});
     // Task 1.1: Implement the login submit flow to call `POST /login` 
     // with username and password, handle errors, save the response 
     // into `currentSession`, then call `updateUI()` and `loadMovies()`.
-
-  });
 
   document.getElementById('cancelLogin').addEventListener('click', () => {
     document.getElementById('loginDialog').close();

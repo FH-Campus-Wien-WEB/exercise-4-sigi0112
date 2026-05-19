@@ -62,6 +62,7 @@ function putMovie() {
   }
   
   xhr.open("PUT", "/movies/" + movie.imdbID)
+  xhr.withCredentials = true;
   xhr.setRequestHeader("Content-Type", "application/json")
 
   xhr.send(JSON.stringify(movie))
